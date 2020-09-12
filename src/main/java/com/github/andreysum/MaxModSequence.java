@@ -1,26 +1,15 @@
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.*;
+package com.github.andreysum;
 
-class Main {
+import java.util.Scanner;
+
+class MaxModSequence {
     public static void main(String[] args) {
-        final Main main = new Main();
-        main.generate();
+        final MaxModSequence main = new MaxModSequence();
         main.run();
     }
 
-    void generate() {
-
-    }
-
     void run() {
-        //        Scanner s = new Scanner(System.in);
-        Scanner s = null;
-        try {
-            s = new Scanner(new FileInputStream("input.txt"));
-        } catch (IOException e) {
-
-        }
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
