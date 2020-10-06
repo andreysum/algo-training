@@ -1,7 +1,5 @@
 package com.github.andreysum;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 class Knapsack {
@@ -12,13 +10,7 @@ class Knapsack {
     }
 
     void run() {
-        Scanner s = null;
-        try {
-            s = new Scanner(new File("input.txt"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-//        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int w = s.nextInt();
         int n = s.nextInt();
         int[] ws = new int[n];

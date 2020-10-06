@@ -1,25 +1,19 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.*;
-import java.util.stream.*;
+package com.github.andreysum;
 
-class Main {
+import java.util.Scanner;
+
+class SimpleCalc {
     int[] d;
+
     public static void main(String[] args) {
-        Main m = new Main();
+        SimpleCalc m = new SimpleCalc();
         m.run();
     }
 
     void run() {
-        Scanner s = null;
-        try {
-            s = new Scanner(new File("input.txt"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        //        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        d = new int[n+1];
+        d = new int[n + 1];
         Calc[] ops = new Calc[n + 1];
         for (int i = 1; i <= n; i++) {
             d[i] = i - 1;
@@ -56,7 +50,7 @@ class Main {
             res[i--] = k;
             k = ops[k].prev;
         }
-        for(int b = 0; b <= d[n]; b++) {
+        for (int b = 0; b <= d[n]; b++) {
             System.out.print(res[b] + " ");
         }
     }
