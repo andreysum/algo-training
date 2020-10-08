@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SubstringSearchTest {
+public class SubstringPermutationSearchTest {
     @Test
     public void noSubstring() {
         // given
@@ -12,7 +12,7 @@ public class SubstringSearchTest {
         char[] s = new char[] {'e', 'r', 'r'};
 
         // when
-        int res = SubstringSearch.find(t, s);
+        int res = new SubstringPermutationSearch().search(t, s);
 
         // then
         assertEquals(-1, res);
@@ -25,7 +25,7 @@ public class SubstringSearchTest {
         char[] s = new char[] {'e', 'r', 'r'};
 
         // when
-        int res = SubstringSearch.find(t, s);
+        int res = new SubstringPermutationSearch().search(t, s);
 
         // then
         assertEquals(-1, res);

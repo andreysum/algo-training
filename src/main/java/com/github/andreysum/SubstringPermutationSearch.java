@@ -1,10 +1,11 @@
+package com.github.andreysum;
 import java.io.*;
 import java.util.*;
 
-class Main {
+class SubstringPermutationSearch {
     public static void main(String[] args) throws FileNotFoundException {
-        Main m = new Main();
-//        m.generate();
+        SubstringPermutationSearch m = new SubstringPermutationSearch();
+        //        m.generate();
         long start = System.currentTimeMillis();
         m.run();
         long end = System.currentTimeMillis();
@@ -37,7 +38,7 @@ class Main {
         System.out.println(res);
     }
 
-    int search(char[] str, char[] subStr) {
+    public int search(char[] str, char[] subStr) {
         if (str.length == 0 || subStr.length == 0 || str.length < subStr.length) {
             return -1;
         }
